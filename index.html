@@ -15,7 +15,7 @@
 
     body {
       font-family: 'Poppins', sans-serif;
-      background: url('img/forest-bg.jpg') no-repeat center center fixed;
+      background: url('img/1.jpg') no-repeat center center fixed;
       background-size: cover;
       color: #f0f0f0;
       line-height: 1.6;
@@ -67,15 +67,20 @@
 
     .image-block {
       background: #004d00;
-      padding: 1rem;
+      padding: 0.5rem;
       border-radius: 10px;
       text-align: center;
       transition: transform 0.3s ease;
-      color: #ffffff;
     }
 
     .image-block:hover {
       transform: scale(1.02);
+    }
+
+    .image-block img {
+      width: 100%;
+      border-radius: 10px;
+      display: block;
     }
 
     .image-block p {
@@ -99,14 +104,13 @@
       color: #a8ff9f;
     }
 
-    .map img {
+    .map iframe {
       width: 100%;
-      max-width: 600px;
-      margin-top: 1rem;
+      height: 400px;
+      border: none;
       border-radius: 10px;
       display: block;
-      margin-left: auto;
-      margin-right: auto;
+      margin: 1rem auto 0 auto;
     }
 
     footer {
@@ -121,7 +125,6 @@
       .videos .video-container {
         flex-direction: row;
       }
-
       .videos video {
         flex: 1;
       }
@@ -131,16 +134,13 @@
       h1 {
         font-size: 1.5rem;
       }
-
       .logo {
         height: 50px;
       }
-
       section {
         margin: 0.5rem auto;
         padding: 1rem;
       }
-
       .gallery .images {
         grid-template-columns: 1fr 1fr;
       }
@@ -162,25 +162,39 @@
     <h2>Our Safari Experiences</h2>
     <p>Explore thrilling wildlife tours, majestic landscapes, and authentic cultural engagements. We tailor your adventures to match your spirit of discovery.</p>
     <div class="images">
-      <div class="image-block"><p>Image 1</p></div>
-      <div class="image-block"><p>Image 2</p></div>
-      <div class="image-block"><p>Image 3</p></div>
-      <div class="image-block"><p>Image 4</p></div>
-      <div class="image-block"><p>Image 5</p></div>
-      <div class="image-block"><p>Image 6</p></div>
-      <div class="image-block"><p>Image 7</p></div>
-      <div class="image-block"><p>Image 8</p></div>
-      <div class="image-block"><p>Image 9</p></div>
-      <div class="image-block"><p>Image 10</p></div>
+      <!-- Loop through images 1.jpg to 22.jpg -->
+      <div class="image-block"><img src="img/1.jpg" alt="Image 1"><p>Image 1</p></div>
+      <div class="image-block"><img src="img/2.jpg" alt="Image 2"><p>Image 2</p></div>
+      <div class="image-block"><img src="img/3.jpg" alt="Image 3"><p>Image 3</p></div>
+      <div class="image-block"><img src="img/4.jpg" alt="Image 4"><p>Image 4</p></div>
+      <div class="image-block"><img src="img/5.jpg" alt="Image 5"><p>Image 5</p></div>
+      <div class="image-block"><img src="img/6.jpg" alt="Image 6"><p>Image 6</p></div>
+      <div class="image-block"><img src="img/7.jpg" alt="Image 7"><p>Image 7</p></div>
+      <div class="image-block"><img src="img/8.jpg" alt="Image 8"><p>Image 8</p></div>
+      <div class="image-block"><img src="img/9.jpg" alt="Image 9"><p>Image 9</p></div>
+      <div class="image-block"><img src="img/10.jpg" alt="Image 10"><p>Image 10</p></div>
+      <div class="image-block"><img src="img/11.jpg" alt="Image 11"><p>Image 11</p></div>
+      <div class="image-block"><img src="img/12.jpg" alt="Image 12"><p>Image 12</p></div>
+      <div class="image-block"><img src="img/13.jpg" alt="Image 13"><p>Image 13</p></div>
+      <div class="image-block"><img src="img/14.jpg" alt="Image 14"><p>Image 14</p></div>
+      <div class="image-block"><img src="img/15.jpg" alt="Image 15"><p>Image 15</p></div>
+      <div class="image-block"><img src="img/16.jpg" alt="Image 16"><p>Image 16</p></div>
+      <div class="image-block"><img src="img/17.jpg" alt="Image 17"><p>Image 17</p></div>
+      <div class="image-block"><img src="img/18.jpg" alt="Image 18"><p>Image 18</p></div>
+      <div class="image-block"><img src="img/19.jpg" alt="Image 19"><p>Image 19</p></div>
+      <div class="image-block"><img src="img/20.jpg" alt="Image 20"><p>Image 20</p></div>
+      <div class="image-block"><img src="img/21.jpg" alt="Image 21"><p>Image 21</p></div>
+      <div class="image-block"><img src="img/22.jpg" alt="Image 22"><p>Image 22</p></div>
     </div>
   </section>
 
   <section class="videos">
     <h2>Watch Our Adventures</h2>
     <div class="video-container">
-      <video controls src="vid/video1.mp4"></video>
-      <video controls src="vid/video2.mp4"></video>
-      <video controls src="vid/video3.mp4"></video>
+      <video controls src="vid/1.mp4"></video>
+      <video controls src="vid/2.mp4"></video>
+      <video controls src="vid/3.mp4"></video>
+      <video controls src="vid/4.mp4"></video>
     </div>
   </section>
 
@@ -198,8 +212,13 @@
 
   <section class="map">
     <h2>Our Location</h2>
-    <p>Visit us in Kampala, Uganda. Our office is open Monday to Saturday, 8 AM – 5 PM.</p>
-    <img src="img/map.png" alt="Damaki Safaris Location Map" />
+    <p>Visit us in Entebbe, Uganda. Our office is open Monday to Saturday, 8 AM – 5 PM.</p>
+    <!-- Embedded Google Map centered on Entebbe coordinates -->
+    <iframe 
+      src="https://maps.google.com/maps?q=entebbe%20uganda&t=&z=13&ie=UTF8&iwloc=&output=embed" 
+      allowfullscreen 
+      loading="lazy">
+    </iframe>
   </section>
 
   <footer>
