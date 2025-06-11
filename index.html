@@ -9,25 +9,27 @@
   <style>
     * {
       box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
     body {
-      margin: 0;
       font-family: 'Poppins', sans-serif;
       background: url('img/forest-bg.jpg') no-repeat center center fixed;
       background-size: cover;
       color: #f0f0f0;
+      line-height: 1.6;
     }
 
     .header {
-      background: rgba(0, 51, 0, 0.9);
+      background: rgba(0, 51, 0, 0.95);
       padding: 1rem;
       text-align: center;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 1rem;
       flex-wrap: wrap;
+      gap: 1rem;
     }
 
     .logo {
@@ -36,24 +38,26 @@
 
     h1, h2 {
       color: #a8ff9f;
-      margin: 0.5rem 0;
     }
 
     section {
-      padding: 2rem;
-      background-color: rgba(0, 51, 0, 0.7);
+      padding: 2rem 1rem;
+      background-color: rgba(0, 51, 0, 0.75);
       margin: 1rem;
       border-radius: 10px;
     }
 
-    p {
+    .about p,
+    .patterns p,
+    .contact p,
+    .map p {
       font-size: 1.05rem;
-      line-height: 1.6;
+      margin-top: 0.5rem;
     }
 
     .gallery .images {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
       gap: 1rem;
     }
 
@@ -62,11 +66,21 @@
       padding: 1rem;
       border-radius: 10px;
       text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .image-block:hover {
+      transform: scale(1.02);
     }
 
     .image-block img {
       width: 100%;
       border-radius: 10px;
+    }
+
+    .image-block p {
+      margin-top: 0.5rem;
+      font-weight: 500;
     }
 
     .videos .video-container {
@@ -94,8 +108,9 @@
 
     footer {
       text-align: center;
-      background: rgba(0, 51, 0, 0.9);
+      background: rgba(0, 51, 0, 0.95);
       padding: 1rem;
+      margin-top: 2rem;
       color: #dfffd9;
     }
 
@@ -108,6 +123,21 @@
         flex: 1;
       }
     }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      .logo {
+        height: 50px;
+      }
+
+      section {
+        margin: 0.5rem;
+        padding: 1rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -118,12 +148,12 @@
 
   <section class="about">
     <h2>About Us</h2>
-    <p>Damaki Safaris is a premier Ugandan tour and travel company offering unforgettable safari experiences across Uganda's rich landscapes. We focus on eco-tourism, conservation, and tailored travel packages that showcase the best of Uganda’s wildlife and culture.</p>
+    <p>Damaki Safaris is a premier Ugandan tour and travel company offering unforgettable safari experiences across Uganda. We focus on eco-tourism, conservation, and personalized packages that connect you with the Pearl of Africa’s beauty.</p>
   </section>
 
   <section class="gallery">
     <h2>Our Safari Experiences</h2>
-    <p>Explore a variety of adventures, including gorilla trekking, savannah game drives, bird watching, cultural tours, and river cruises. Each journey is carefully curated for both thrill and serenity.</p>
+    <p>Explore thrilling wildlife tours, majestic landscapes, and authentic cultural engagements. We tailor your adventures to match your spirit of discovery.</p>
     <div class="images">
       <div class="image-block">
         <img src="img/img1.jpg" alt="Gorilla Trekking" />
@@ -131,11 +161,11 @@
       </div>
       <div class="image-block">
         <img src="img/img2.jpg" alt="Murchison Falls" />
-        <p>Game Drive at Murchison Falls</p>
+        <p>Game Drive in Murchison Falls</p>
       </div>
       <div class="image-block">
         <img src="img/img3.jpg" alt="Bird Watching" />
-        <p>Bird Watching in Queen Elizabeth NP</p>
+        <p>Bird Watching in Queen Elizabeth</p>
       </div>
       <div class="image-block">
         <img src="img/img4.jpg" alt="Boat Safari" />
@@ -143,13 +173,28 @@
       </div>
       <div class="image-block">
         <img src="img/img5.jpg" alt="Cultural Dance" />
-        <p>Local Cultural Dance Experience</p>
+        <p>Cultural Dances in Busoga</p>
       </div>
       <div class="image-block">
-        <img src="img/img6.jpg" alt="Hiking the Rwenzoris" />
-        <p>Hiking the Rwenzori Mountains</p>
+        <img src="img/img6.jpg" alt="Rwenzori Hiking" />
+        <p>Hiking Rwenzori Mountains</p>
       </div>
-      <!-- Add up to 20 images like this -->
+      <div class="image-block">
+        <img src="img/img7.jpg" alt="Lake Mburo" />
+        <p>Wildlife in Lake Mburo</p>
+      </div>
+      <div class="image-block">
+        <img src="img/img8.jpg" alt="Chimpanzee Tracking" />
+        <p>Chimpanzee Tracking in Kibale</p>
+      </div>
+      <div class="image-block">
+        <img src="img/img9.jpg" alt="Sipi Falls" />
+        <p>Hiking to Sipi Falls</p>
+      </div>
+      <div class="image-block">
+        <img src="img/img10.jpg" alt="Ziwa Rhino" />
+        <p>Rhino Tracking at Ziwa Sanctuary</p>
+      </div>
     </div>
   </section>
 
@@ -164,7 +209,7 @@
 
   <section class="patterns">
     <h2>Our Travel Patterns</h2>
-    <p>Our travel packages are tailored to suit solo travelers, couples, and groups. We plan short excursions, full-week safaris, and custom road trips covering top attractions like Bwindi, Murchison, Lake Mburo, and more.</p>
+    <p>Choose from short wildlife safaris, cross-country road trips, birding tours, and cultural expeditions. We cater to solo travelers, families, honeymooners, and groups.</p>
   </section>
 
   <section class="contact">
@@ -176,7 +221,7 @@
 
   <section class="map">
     <h2>Our Location</h2>
-    <p>We are based in Kampala, Uganda. Visit our office or call to schedule an appointment.</p>
+    <p>Visit us in Kampala, Uganda. Our office is open Monday to Saturday, 8 AM – 5 PM.</p>
     <img src="img/map.png" alt="Damaki Safaris Location Map" />
   </section>
 
