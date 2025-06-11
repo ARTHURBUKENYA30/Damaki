@@ -7,6 +7,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet"/>
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
@@ -23,6 +27,7 @@
       align-items: center;
       justify-content: center;
       gap: 1rem;
+      flex-wrap: wrap;
     }
 
     .logo {
@@ -31,6 +36,7 @@
 
     h1, h2 {
       color: #a8ff9f;
+      margin: 0.5rem 0;
     }
 
     section {
@@ -40,16 +46,14 @@
       border-radius: 10px;
     }
 
-    .about p,
-    .patterns p,
-    .contact p {
-      font-size: 1.1rem;
+    p {
+      font-size: 1.05rem;
       line-height: 1.6;
     }
 
     .gallery .images {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
       gap: 1rem;
     }
 
@@ -63,11 +67,6 @@
     .image-block img {
       width: 100%;
       border-radius: 10px;
-    }
-
-    .image-block p {
-      margin-top: 0.5rem;
-      font-weight: 500;
     }
 
     .videos .video-container {
@@ -97,7 +96,6 @@
       text-align: center;
       background: rgba(0, 51, 0, 0.9);
       padding: 1rem;
-      margin-top: 2rem;
       color: #dfffd9;
     }
 
@@ -105,6 +103,7 @@
       .videos .video-container {
         flex-direction: row;
       }
+
       .videos video {
         flex: 1;
       }
@@ -119,21 +118,38 @@
 
   <section class="about">
     <h2>About Us</h2>
-    <p>Damaki Safaris is a premier Ugandan tour and travel company offering unforgettable safari experiences across Uganda's rich landscapes and wildlife destinations. We specialize in eco-tourism and personalized travel packages.</p>
+    <p>Damaki Safaris is a premier Ugandan tour and travel company offering unforgettable safari experiences across Uganda's rich landscapes. We focus on eco-tourism, conservation, and tailored travel packages that showcase the best of Uganda’s wildlife and culture.</p>
   </section>
 
   <section class="gallery">
     <h2>Our Safari Experiences</h2>
+    <p>Explore a variety of adventures, including gorilla trekking, savannah game drives, bird watching, cultural tours, and river cruises. Each journey is carefully curated for both thrill and serenity.</p>
     <div class="images">
       <div class="image-block">
         <img src="img/img1.jpg" alt="Gorilla Trekking" />
         <p>Gorilla Trekking in Bwindi</p>
       </div>
       <div class="image-block">
-        <img src="img/img2.jpg" alt="Safari Jeep" />
-        <p>Safari Drive through Murchison Falls</p>
+        <img src="img/img2.jpg" alt="Murchison Falls" />
+        <p>Game Drive at Murchison Falls</p>
       </div>
-      <!-- Repeat more image-blocks up to img20.jpg -->
+      <div class="image-block">
+        <img src="img/img3.jpg" alt="Bird Watching" />
+        <p>Bird Watching in Queen Elizabeth NP</p>
+      </div>
+      <div class="image-block">
+        <img src="img/img4.jpg" alt="Boat Safari" />
+        <p>Boat Cruise on Kazinga Channel</p>
+      </div>
+      <div class="image-block">
+        <img src="img/img5.jpg" alt="Cultural Dance" />
+        <p>Local Cultural Dance Experience</p>
+      </div>
+      <div class="image-block">
+        <img src="img/img6.jpg" alt="Hiking the Rwenzoris" />
+        <p>Hiking the Rwenzori Mountains</p>
+      </div>
+      <!-- Add up to 20 images like this -->
     </div>
   </section>
 
@@ -148,7 +164,7 @@
 
   <section class="patterns">
     <h2>Our Travel Patterns</h2>
-    <p>We provide customized safari patterns that cover national parks, wildlife encounters, cultural tours, and adventure travel throughout Uganda.</p>
+    <p>Our travel packages are tailored to suit solo travelers, couples, and groups. We plan short excursions, full-week safaris, and custom road trips covering top attractions like Bwindi, Murchison, Lake Mburo, and more.</p>
   </section>
 
   <section class="contact">
@@ -156,9 +172,12 @@
     <p><i class="fas fa-phone"></i> +256 700 000 000</p>
     <p><i class="fab fa-whatsapp"></i> +256 700 000 000</p>
     <p><i class="fas fa-envelope"></i> info@damakisafaris.ug</p>
-    <div class="map">
-      <img src="img/map.png" alt="Damaki Safaris Location Map" />
-    </div>
+  </section>
+
+  <section class="map">
+    <h2>Our Location</h2>
+    <p>We are based in Kampala, Uganda. Visit our office or call to schedule an appointment.</p>
+    <img src="img/map.png" alt="Damaki Safaris Location Map" />
   </section>
 
   <footer>
