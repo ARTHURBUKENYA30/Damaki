@@ -2,116 +2,278 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Damaki Safari</title>
-  <!-- FontAwesome for icons -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    integrity="sha512-dNrHwGqXZf4OtQfUVXZjoR5ZbS4JdSAcAxN6z+VlmW2wRaJnhTT+W3nbPHKZZ7bFEr+7xFSXfRvTQHd67Dj+tw=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Damaki Safaris Uganda</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet"/>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
-      margin: 20px;
-      color: #333;
+      font-family: 'Poppins', sans-serif;
+      background: url('img/1.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #f0f0f0;
+      line-height: 1.6;
+      padding: 0 1rem;
     }
-    section.gallery {
-      max-width: 900px;
-      margin: 0 auto 3rem auto;
+
+    .header {
+      background: rgba(0, 51, 0, 0.95);
       padding: 1rem;
-      background: #e0f1d6;
-      border-radius: 10px;
-    }
-    section.gallery h2 {
       text-align: center;
-      color: #3a5a0b;
-      margin-bottom: 0.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
     }
-    section.gallery p {
-      text-align: center;
-      margin-bottom: 2rem;
-      font-size: 1.1rem;
-      color: #5a6f28;
+
+    .logo {
+      height: 60px;
     }
-    .safari-experience {
-      background: #d4e6a1;
-      border-radius: 8px;
-      padding: 1rem 1.5rem;
-      margin-bottom: 2rem;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-    .safari-experience h3 {
-      color: #4b700b;
-      margin-bottom: 0.6rem;
-    }
-    .safari-experience img {
-      display: block;
-      max-width: 100%;
-      border-radius: 8px;
-      margin-bottom: 0.7rem;
-    }
-    .safari-experience p {
-      font-size: 1rem;
-      line-height: 1.5;
-      color: #4b5b22;
-    }
-    section.contact {
-      background-color: rgba(0, 70, 0, 0.85);
-      border-radius: 10px;
-      padding: 1rem 2rem;
-      max-width: 400px;
-      margin: 0 auto;
-      color: #c3f3a2;
-      font-size: 1.1rem;
-      box-shadow: 0 0 10px rgba(0, 128, 0, 0.6);
-    }
-    section.contact h2 {
+
+    h1, h2 {
       color: #a8ff9f;
       text-align: center;
+    }
+
+    section {
+      padding: 2rem 1rem;
+      background-color: rgba(0, 51, 0, 0.75);
+      margin: 1rem auto;
+      border-radius: 10px;
+      max-width: 1100px;
+    }
+
+    .about p,
+    .patterns p,
+    .contact p,
+    .map p {
+      font-size: 1.05rem;
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+
+    .gallery .images {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 1rem;
+    }
+
+    .image-block {
+      background: #004d00;
+      padding: 0.5rem;
+      border-radius: 10px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .image-block:hover {
+      transform: scale(1.02);
+    }
+
+    .image-block img {
+      width: 100%;
+      border-radius: 10px;
+      display: block;
+    }
+
+    .image-block p {
+      margin-top: 0.5rem;
+      font-weight: 500;
+    }
+
+    .videos .video-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .videos video {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .contact p i {
+      margin-right: 0.5rem;
+      color: #a8ff9f;
+    }
+
+    .map iframe {
+      width: 100%;
+      height: 400px;
+      border: none;
+      border-radius: 10px;
+      display: block;
+      margin: 1rem auto 0 auto;
+    }
+
+    footer {
+      text-align: center;
+      background: rgba(0, 51, 0, 0.95);
+      padding: 1rem;
+      margin-top: 2rem;
+      color: #dfffd9;
+    }
+
+    /* Safari experiences styling */
+    .safari-experience {
+      background: rgba(0, 70, 0, 0.85);
+      padding: 1rem 1.5rem;
+      border-radius: 10px;
+      margin-bottom: 1.5rem;
+    }
+
+    .safari-experience h3 {
+      color: #b6f299;
+      margin-bottom: 0.4rem;
+      font-weight: 700;
+    }
+
+    .safari-experience p {
+      color: #e0f3c0;
+      font-size: 1rem;
+      line-height: 1.5;
       margin-bottom: 1rem;
     }
-    section.contact p {
-      margin: 0.6rem 0;
+
+    @media (min-width: 768px) {
+      .videos .video-container {
+        flex-direction: row;
+      }
+      .videos video {
+        flex: 1;
+      }
     }
-    section.contact i {
-      margin-right: 0.5rem;
-      font-size: 1.4rem;
-      vertical-align: middle;
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+      .logo {
+        height: 50px;
+      }
+      section {
+        margin: 0.5rem auto;
+        padding: 1rem;
+      }
+      .gallery .images {
+        grid-template-columns: 1fr 1fr;
+      }
     }
-    .fa-phone { color: #7de26d; }
-    .fa-whatsapp { color: #25d366; }
-    .fa-envelope { color: #7de26d; }
   </style>
 </head>
 <body>
+  <header class="header">
+    <img src="img/logo1.png" alt="Damaki Safaris Logo" class="logo" />
+    <h1>Damaki Safaris Uganda</h1>
+  </header>
+
+  <section class="about">
+    <h2>About Us</h2>
+    <p>Damaki Safaris is a premier Ugandan tour and travel company offering unforgettable safari experiences across Uganda. We focus on eco-tourism, conservation, and personalized packages that connect you with the Pearl of Africa’s beauty.</p>
+  </section>
 
   <section class="gallery">
     <h2>Our Safari Experiences</h2>
     <p>Explore thrilling wildlife tours, majestic landscapes, and authentic cultural engagements. We tailor your adventures to match your spirit of discovery.</p>
 
+    <!-- Added Safari Experience Descriptions -->
     <div class="safari-experience">
       <h3>Gorilla Trekking in Bwindi and Mgahinga</h3>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/7/7d/Mountain_gorilla_in_Bwindi_National_Park%2C_Uganda.jpg" alt="Mountain Gorilla" />
       <p>Embark on a once-in-a-lifetime journey to meet the gentle giants of the forest — mountain gorillas. Guided by experienced trackers, witness these incredible creatures in their natural habitat and create memories that last forever. This intimate encounter offers a profound connection to nature and an unforgettable wildlife experience.</p>
     </div>
 
     <div class="safari-experience">
       <h3>Chimpanzee Tracking in Kibale Forest</h3>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/5/59/Chimpanzee_in_Kibale_Forest%2C_Uganda.jpg" alt="Chimpanzee in Kibale" />
       <p>Discover Uganda’s rich primate diversity with a thrilling chimpanzee trek through the enchanting Kibale Forest National Park. Watch our closest relatives in their playful and social behaviors as they swing through the canopy and interact in fascinating ways. The trek offers incredible birdwatching opportunities as well.</p>
     </div>
 
     <div class="safari-experience">
       <h3>Classic Wildlife Safaris in Queen Elizabeth & Murchison Falls</h3>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/African_elephants_in_Queen_Elizabeth_National_Park.jpg" alt="Elephants in Queen Elizabeth Park" />
       <p>Experience the drama of the African savannah. Spot elephants, lions, buffalo, hippos, and countless bird species across diverse landscapes. Enjoy exciting game drives, serene boat cruises along the Kazinga Channel, and breathtaking views of the powerful Murchison Falls. The park’s diverse ecosystems promise remarkable sightings around every corner.</p>
     </div>
 
-    <!--
+    <div class="safari-experience">
+      <h3>Cultural Tours & Community Visits</h3>
+      <p>Engage with Uganda’s rich cultural tapestry. Visit local villages to meet the warm and welcoming people, participate in traditional dances, sample authentic cuisine, and learn about the fascinating customs of Uganda’s many tribes. These immersive experiences deepen your appreciation of Uganda’s vibrant heritage.</p>
+    </div>
+
+    <div class="safari-experience">
+      <h3>Birdwatching Expeditions</h3>
+      <p>Uganda is a birdwatcher’s paradise with over 1,000 species. Join expert guides on dedicated birding safaris to places like Mabamba Swamp, home of the rare Shoebill stork, or the vast wetlands of Lake Mburo. Whether you’re a seasoned birder or a curious nature lover, this experience offers unparalleled sightings.</p>
+    </div>
+
+    <div class="safari-experience">
+      <h3>Hiking and Nature Walks</h3>
+      <p>Explore Uganda’s breathtaking landscapes on foot. Trek through the scenic Rwenzori Mountains, often called the “Mountains of the Moon,” or hike to the stunning Sipi Falls. These hikes offer spectacular views, unique flora and fauna, and a chance to connect with nature in peaceful surroundings.</p>
+    </div>
+
+    <div class="safari-experience">
+      <h3>Nile River Adventures</h3>
+      <p>Experience the thrill of the world’s longest river with activities like white-water rafting near Jinja, fishing, or boat cruises that offer unique perspectives of the river’s wildlife and scenery. The Nile promises adventure for thrill-seekers and nature lovers alike.</p>
+    </div>
+
+    <div class="safari-experience">
+      <h3>Wildlife Photography Safaris</h3>
+      <p>Capture the magic of Uganda’s wildlife and landscapes with specialized photography safaris led by professional guides who understand the best vantage points and lighting conditions. Whether you’re an amateur or pro, we’ll help you frame unforgettable shots.</p>
+    </div>
+
+    <div class="safari-experience">
+      <h3>Hot Air Balloon Safaris</h3>
+      <p>Soar over the vast savannahs of Queen Elizabeth National Park at dawn, witnessing wildlife from a breathtaking aerial perspective. The tranquility of the balloon ride combined with stunning panoramic views makes for an unforgettable adventure.</p>
+    </div>
+
+    <div class="safari-experience">
+      <h3>Bwindi Impenetrable Forest Walks</h3>
+      <p>Beyond gorilla trekking, enjoy guided nature walks through the ancient Bwindi forest, rich in biodiversity. Spot unique plant species, rare birds, and smaller mammals as your guide shares fascinating insights into this UNESCO World Heritage Site.</p>
+    </div>
+
+    <div class="safari-experience">
+      <h3>Community-Based Tourism Projects</h3>
+      <p>Participate in responsible tourism by visiting community-run projects. Learn traditional crafts, support local artisans, and enjoy authentic hospitality while contributing directly to the livelihoods of local families.</p>
+    </div>
+
+    <div class="safari-experience">
+      <h3>Lake Bunyonyi Retreats</h3>
+      <p>Relax at the “Place of Many Little Birds,” Lake Bunyonyi, one of Africa’s deepest lakes. Enjoy boat trips, birdwatching, kayaking, or simply unwind amid breathtaking scenery and cool mountain air.</p>
+    </div>
+
+    <div class="safari-experience">
+      <h3>Mt. Elgon National Park Exploration</h3>
+      <p>Discover the less-traveled Mt. Elgon, an extinct volcano boasting stunning caves, waterfalls, and diverse wildlife. Hike through lush forests and grasslands, spot rare species, and explore unique geological formations.</p>
+    </div>
+
+    <div class="safari-experience">
+      <h3>Sipi Falls Adventures</h3>
+      <p>Experience the spectacular three-tiered Sipi Falls. Ideal for hiking, abseiling, and rock climbing, this area offers thrilling outdoor activities surrounded by stunning scenery and coffee plantations.</p>
+    </div>
+
+    <div class="safari-experience">
+      <h3>Safari Night Drives</h3>
+      <p>Explore the African wilderness after dark on guided night drives available in select parks like Murchison Falls and Lake Mburo. Spot nocturnal wildlife such as leopards, hyenas, and bush babies as the savannah comes alive under the stars.</p>
+    </div>
+
+    <div class="safari-experience">
+      <h3>Fishing & Birding at Lake Victoria</h3>
+      <p>Enjoy sport fishing or birdwatching on Africa’s largest freshwater lake, Lake Victoria. Experience tranquil boat rides, visit local fishing villages, and observe unique water birds in their natural habitat.</p>
+    </div>
+
+    <div class="safari-experience">
+      <h3>Kayaking & Canoeing Adventures</h3>
+      <p>Paddle along serene waterways such as the Kazinga Channel or the shores of Lake Bunyonyi. These peaceful excursions offer close encounters with hippos, crocodiles, and an abundance of birdlife.</p>
+    </div>
+
+    <div class="safari-experience">
+      <h3>Conservation Volunteer Programs</h3>
+      <p>Combine your passion for wildlife with meaningful contribution by joining conservation initiatives. Assist with animal monitoring, habitat restoration, or community education projects to support Uganda’s biodiversity.</p>
+    </div>
+
     <!-- Existing Image Gallery below -->
     <div class="images">
       <div class="image-block"><img src="img/1.jpg" alt="Image 1"><p></p></div>
@@ -137,8 +299,21 @@
       <div class="image-block"><img src="img/21.jpg" alt="Image 21"><p></p></div>
       <div class="image-block"><img src="img/22.jpg" alt="Image 22"><p></p></div>
     </div>
-    -->
+  </section>
 
+  <section class="videos">
+    <h2>Watch Our Adventures</h2>
+    <div class="video-container">
+      <video controls src="vid/1.mp4"></video>
+      <video controls src="vid/2.mp4"></video>
+      <video controls src="vid/3.mp4"></video>
+      <video controls src="vid/4.mp4"></video>
+    </div>
+  </section>
+
+  <section class="patterns">
+    <h2>Our Travel Patterns</h2>
+    <p>Choose from short wildlife safaris, cross-country road trips, birding tours, and cultural expeditions. We cater to solo travelers, families, honeymooners, and groups.</p>
   </section>
 
   <section class="contact">
@@ -148,5 +323,18 @@
     <p><i class="fas fa-envelope"></i> Damakisafaris@gmail.com</p>
   </section>
 
+  <section class="map">
+    <h2>Our Location</h2>
+    <p>Visit us in Entebbe, Uganda. Our office is open Monday to Saturday, 8 AM – 5 PM.</p>
+    <iframe 
+      src="https://maps.google.com/maps?q=entebbe%20uganda&t=&z=13&ie=UTF8&iwloc=&output=embed" 
+      allowfullscreen 
+      loading="lazy">
+    </iframe>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Damaki Safaris Uganda. All rights reserved.</p>
+  </footer>
 </body>
 </html>
